@@ -5,6 +5,6 @@ export default createProxyMiddleware({
   target: `https://api.telegram.org/file/bot${String(process.env.TOKEN)}`,
   changeOrigin: true,
   pathRewrite: {
-    '/api/files': '',
+    '^/api/files/*': '',
   },
-});
+})
