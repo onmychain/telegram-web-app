@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { Bot } from "grammy";
-import { Chat, ChatPhoto } from 'grammy/out/types';
+import { Chat } from 'grammy/out/types';
 
 interface Data {
     title: string
