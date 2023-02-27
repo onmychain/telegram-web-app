@@ -23,6 +23,7 @@ export default async function handler(
             // return 404
             const bot = new Bot(String(process.env.TOKEN))
             const { title, description, photo }= await bot.api.getChat(id) as Chat.SupergroupGetChat
+            // return the title, description, and photo data
             res.status(200).json({
                 title,
                 description,
