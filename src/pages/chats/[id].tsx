@@ -1,3 +1,4 @@
+import InviteLink from "@/components/InviteLink"
 import { useRouter } from "next/router"
 import useSWR, { Fetcher } from 'swr'
 
@@ -27,6 +28,7 @@ export default function Chat() {
             { data?.photo_path ? <object data={`/api/files/${data?.photo_path}`} width={250} height={250} /> : <p>no image</p> }
             <h2>{data?.title}</h2>
             <p>{data?.description}</p>
+            <InviteLink id={id} />
         </div>
     )
 }
